@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/homes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Item Detail</ion-title>
+    <ion-buttons slot="primary">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="loadedAdmin.type === 'CPU'">
+  <ion-card >
+    <ion-grid>
+      <ion-row>
+        <img style="width:100%" [src]="loadedAdmin.image">
+            <ion-card-content>
+              <ion-text>
+                <b>{{loadedAdmin.merk}} {{loadedAdmin.model}} {{loadedAdmin.type}}</b> 
+                <br>
+                {{loadedAdmin.price}} 
+                <br>
+                stock : {{loadedAdmin.stock}}
+                <br>
+                <br>
+                <b>Tentang Produk : </b>
+                <br>
+                base Clock : {{loadedAdmin.baseClock}} 
+                <br>
+                boost Clock : {{loadedAdmin.boostClock}}
+                <br>
+                core : {{loadedAdmin.core}}
+                <br>
+                thread : {{loadedAdmin.thread}}
+              </ion-text>
+            </ion-card-content>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+<ion-content *ngIf="loadedAdmin.type === 'GPU'">
+  <ion-card >
+    <ion-grid>
+      <ion-row>
+        <img style="width:100%" [src]="loadedAdmin.image">
+            <ion-card-content>
+              <ion-text>
+                <b>{{loadedAdmin.merk}} {{loadedAdmin.model}} {{loadedAdmin.type}}</b> 
+                <br>
+                {{loadedAdmin.price}} 
+                <br>
+                stock : {{loadedAdmin.stock}}
+                <br>          
+              </ion-text>
+            </ion-card-content>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+<ion-content *ngIf="loadedAdmin.type === 'RAM'">
+  <ion-card >
+    <ion-grid>
+      <ion-row>
+        <img style="width:100%" [src]="loadedAdmin.image">
+            <ion-card-content>
+              <ion-text>
+                <b>{{loadedAdmin.merk}} {{loadedAdmin.model}} {{loadedAdmin.type}}</b> 
+                <br>
+                {{loadedAdmin.price}} 
+                <br>
+                stock : {{loadedAdmin.stock}}
+                <br>
+                <br>
+                <b>Tentang Produk : </b>
+                <br>
+                Memory size : {{loadedAdmin.size}} 
+                <br>
+                speed : {{loadedAdmin.speed}}
+              </ion-text>
+            </ion-card-content>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+<ion-content *ngIf="loadedAdmin.type === 'Motherboard'">
+  <ion-card >
+    <ion-grid>
+      <ion-row>
+        <img style="width:100%" [src]="loadedAdmin.image">
+            <ion-card-content>
+              <ion-text>
+                <b>{{loadedAdmin.merk}} {{loadedAdmin.model}} {{loadedAdmin.type}}</b> 
+                <br>
+                {{loadedAdmin.price}} 
+                <br>
+                stock : {{loadedAdmin.stock}}
+                <br>
+                <br>
+                <b>Tentang Produk : </b>
+                <br>
+                chipset : {{loadedAdmin.chipset}} 
+                <br>
+                compatible : {{loadedAdmin.compatible}}
+              </ion-text>
+            </ion-card-content>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

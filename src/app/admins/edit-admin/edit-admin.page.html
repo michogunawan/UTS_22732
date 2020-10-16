@@ -1,0 +1,181 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admins"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{loadedAdmin.merk}} {{loadedAdmin.model}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="loadedAdmin.type === 'CPU'">
+  <form [formGroup]="form">
+    <ion-list>
+      <ion-input name="id" hidden formControlName="id"></ion-input>
+      <ion-item>
+        <ion-label position="floating">Type</ion-label>
+        <ion-input type="text" formControlName="type" value="{{loadedAdmin.type}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">merk</ion-label>
+        <ion-input type="text" formControlName="merk" value="{{loadedAdmin.merk}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">model</ion-label>
+        <ion-input type="text" formControlName="model" value="{{loadedAdmin.model}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">baseClock</ion-label>
+        <ion-input type="text" formControlName="baseClock" value="{{loadedAdmin.baseClock}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">boostClock</ion-label>
+        <ion-input type="text" formControlName="boostClock" value="{{loadedAdmin.boostClock}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">core</ion-label>
+        <ion-input type="text" formControlName="core" value="{{loadedAdmin.core}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">thread</ion-label>
+        <ion-input type="text" formControlName="thread" value="{{loadedAdmin.thread}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">price</ion-label>
+        <ion-input type="text" formControlName="price" value="{{loadedAdmin.price}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">stock</ion-label>
+        <ion-input type="text" formControlName="stock" value="{{loadedAdmin.stock}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Image URL</ion-label>
+        <ion-input type="text" formControlName="image"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="onSubmit()">Submit</ion-button>
+  </form>
+</ion-content>
+<ion-content *ngIf="loadedAdmin.type === 'GPU'">
+  <form [formGroup]="form">
+    <ion-list>
+      <ion-input name="id" hidden formControlName="id"></ion-input>
+      <ion-item>
+        <ion-label position="floating">Type</ion-label>
+        <ion-input type="text" formControlName="type" value="{{loadedAdmin.type}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">merk</ion-label>
+        <ion-input type="text" formControlName="merk" value="{{loadedAdmin.merk}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">model</ion-label>
+        <ion-input type="text" formControlName="model" value="{{loadedAdmin.model}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">size</ion-label>
+        <ion-input type="text" formControlName="size" value="{{loadedAdmin.size}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">speed</ion-label>
+        <ion-input type="text" formControlName="speed" value="{{loadedAdmin.speed}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">chipset</ion-label>
+        <ion-input type="text" formControlName="chipset" value="{{loadedAdmin.chipset}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">price</ion-label>
+        <ion-input type="text" formControlName="price" value="{{loadedAdmin.price}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">stock</ion-label>
+        <ion-input type="text" formControlName="stock" value="{{loadedAdmin.stock}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Image URL</ion-label>
+        <ion-input type="text" formControlName="image"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="onSubmit()">Submit</ion-button>
+  </form>
+</ion-content>
+<ion-content *ngIf="loadedAdmin.type === 'Motherboard'">
+  <form [formGroup]="form">
+    <ion-list>
+      <ion-input name="id" hidden formControlName="id"></ion-input>
+      <ion-item>
+        <ion-label position="floating">Type</ion-label>
+        <ion-input type="text" formControlName="type" value="{{loadedAdmin.type}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">merk</ion-label>
+        <ion-input type="text" formControlName="merk" value="{{loadedAdmin.merk}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">model</ion-label>
+        <ion-input type="text" formControlName="model" value="{{loadedAdmin.model}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">compatible</ion-label>
+        <ion-input type="text" formControlName="compatible" value="{{loadedAdmin.compatible}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">chipset</ion-label>
+        <ion-input type="text" formControlName="chipset" value="{{loadedAdmin.chipset}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">price</ion-label>
+        <ion-input type="text" formControlName="price" value="{{loadedAdmin.price}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">stock</ion-label>
+        <ion-input type="text" formControlName="stock" value="{{loadedAdmin.stock}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Image URL</ion-label>
+        <ion-input type="text" formControlName="image"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="onSubmit()">Submit</ion-button>
+  </form>
+</ion-content>
+<ion-content *ngIf="loadedAdmin.type === 'RAM'">
+  <form [formGroup]="form">
+    <ion-list>
+      <ion-input name="id" hidden formControlName="id"></ion-input>
+      <ion-item>
+        <ion-label position="floating">Type</ion-label>
+        <ion-input type="text" formControlName="type" value="{{loadedAdmin.type}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">merk</ion-label>
+        <ion-input type="text" formControlName="merk" value="{{loadedAdmin.merk}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">model</ion-label>
+        <ion-input type="text" formControlName="model" value="{{loadedAdmin.model}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">size</ion-label>
+        <ion-input type="text" formControlName="size" value="{{loadedAdmin.size}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">speed</ion-label>
+        <ion-input type="text" formControlName="speed" value="{{loadedAdmin.speed}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">price</ion-label>
+        <ion-input type="text" formControlName="price" value="{{loadedAdmin.price}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">stock</ion-label>
+        <ion-input type="text" formControlName="stock" value="{{loadedAdmin.stock}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Image URL</ion-label>
+        <ion-input type="text" formControlName="image"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="onSubmit()">Submit</ion-button>
+  </form>
+</ion-content>
